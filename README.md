@@ -8,13 +8,19 @@
 
 * go through the main.tf and change accordingly (change backend config according to you platform)
 
-## Terraform commands
+### Terraform commands
 
-* init
+1. init
+```shell
 terraform init
+```
 
-* plan
+2. plan
+```shell
 terraform plan -var-file="../tfvars/dev.tfvars"
+```
 
-* apply
+3. apply
+```shell
 terraform apply -var-file="../tfvars/dev.tfvars"
+```
