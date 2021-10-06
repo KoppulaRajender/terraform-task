@@ -68,17 +68,17 @@ resource "aws_db_parameter_group" "autorabit" {
 
 resource "aws_db_instance" "autorabit" {
   identifier             = var.rds_identifier
-  instance_class          = var.rds_instance_class
-  allocated_storage       = var.rds_allocated_storage
-  engine                  = var.rds_engine
-  engine_version          = var.rds_engine_version
+  instance_class         = var.rds_instance_class
+  allocated_storage      = var.rds_allocated_storage
+  engine                 = var.rds_engine
+  engine_version         = var.rds_engine_version
   username               = var.rds_db_username
   password               = var.rds_db_password
-  port                    = var.rds_db_port
+  port                   = var.rds_db_port
   db_subnet_group_name   = aws_db_subnet_group.autorabit.name
   vpc_security_group_ids = [aws_security_group.rds.id]
   parameter_group_name   = aws_db_parameter_group.autorabit.name
   publicly_accessible    = var.rds_publicly_accessible
   skip_final_snapshot    = var.rds_skip_final_snapshot
-  storage_encrypted       = var.rds_storage_encrypted
+  storage_encrypted      = var.rds_storage_encrypted
 }

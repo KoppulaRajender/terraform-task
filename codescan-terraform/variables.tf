@@ -21,11 +21,11 @@ variable "rds_allocated_storage" {
 
 variable "rds_engine" {
   description = "RDS engine"
-}   
+}
 
 variable "rds_engine_version" {
   description = "RDS engine version"
-}               
+}
 
 variable "rds_db_username" {
   description = "RDS root username"
